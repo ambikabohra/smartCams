@@ -41,3 +41,9 @@ a:hover .header-profile-image {
 .has-error .help-inline.error-text {
   display: inline;
 }
+.smartcamsBG{
+  background-image: url("/modules/core/client/img/brand/homebg2.jpg")
+}
+.transparency{
+  opacity: 0;
+}
