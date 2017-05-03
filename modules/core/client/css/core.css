@@ -42,7 +42,17 @@ a:hover .header-profile-image {
   display: inline;
 }
 .smartcamsBG{
-  background-image: url("/modules/core/client/img/brand/homebg2.jpg")
+  background-image: url("/modules/core/client/img/brand/homebg2.jpg");
+  /*background-size:100%;
+  background-size:*/
+  background-size: 100%;                      /* <------ */
+    background-repeat:   no-repeat;
+    background-position: center center;
+  /*no-repeat center center fixed;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;*/
 }
 .transparency{
   opacity: 0;
