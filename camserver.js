@@ -8,7 +8,7 @@ var moment = require('moment'); //ambika
 //var current_time = moment().format("MMMM Do YYYY, h:mm:ss"); //ambika
 var AWS = require('aws-sdk');
 //AWS.config.update({region:'us-west-2'});
-AWS.config.update({accessKeyId:"AKIAJBQ3H6V45DZTSVDQ",
+AWS.config.update({accessKeyId:"",
                    secretAccessKey:"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",
                    "region":"us-west-2"});
 
