@@ -42,18 +42,38 @@ a:hover .header-profile-image {
   display: inline;
 }
 .smartcamsBG{
+  margin-top: 20px;
   background-image: url("/modules/core/client/img/brand/homebg2.jpg");
   /*background-size:100%;
   background-size:*/
-  background-size: 100%;                      /* <------ */
+  height: 120%;
+  background-size: 100% 150%;                      /* <------ */
     background-repeat:   no-repeat;
-    background-position: center center;
+    /*background-position: center center;*/
   /*no-repeat center center fixed;
         -webkit-background-size: cover;
         -moz-background-size: cover;
         -o-background-size: cover;
         background-size: cover;*/
 }
+.fullBG{
+  background-image: url(/modules/core/client/img/brand/homebg2.jpg);
+    background-size: cover;
+    position: relative;
+}
 .transparency{
   opacity: 0;
+}
+.deep{
+  margin-top: 70px;
+  margin-left: 150px;
+}
+.alignleft{
+      margin-left: -95px !important;
+}
+.bgclass{
+background-color: #fcf8e3;
+}
+.margin{
+  margin-top: 130px;
 }

@@ -35,8 +35,13 @@
     });
 
     menuService.addSubMenuItem('account', 'settings', {
+      title: 'Subscribe for alerts',
+      state: 'settings.mailid'
+    });
+
+    /*menuService.addSubMenuItem('account', 'settings', {
       title: 'Manage Social Accounts',
       state: 'settings.accounts'
-    });
+    })*/
   }
 }());

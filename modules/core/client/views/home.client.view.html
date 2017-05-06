@@ -1,6 +1,6 @@
 <div class="container" ng-controller="HeaderController as vm" ng-hide="vm.authentication.user">
 <section>
-  <div class="jumbotron text-center smartcamsBG">
+  <div class="jumbotron text-center transparency">
     <div class="row">
         <img alt="MEAN.JS" class="img-responsive text-center transparency" src="/modules/core/client/img/brand/logo.png" />
     </div>
@@ -16,22 +16,47 @@
       </p>
     </div>
   </div>
-  <div class="row">
-    <div class="col-md-4">
+  <div class="row margin">
+    <div class="col-md-4 card card-inverse" style="background-color: #fcf8e3; border-color: #333;">
+  <!--div class="card-block">
+    <h3 class="card-title">Special title treatment</h3>
+    <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+    <a href="#" class="btn btn-primary">Go somewhere</a>
+  </div-->
+</div>
+          <!--div class="card col-md-4" style="width: 20rem;">
+      <img class="card-img-top" src="..." alt="Card image cap">
+      <div class="card-block">
+        <h4 class="card-title">Card title</h4>
+        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+        <a href="#" class="btn btn-primary">Go somewhere</a>
+      </div>
+    </div>
+        <div class="card col-md-4" style="width: 20rem;">
+      <img class="card-img-top" src="..." alt="Card image cap">
+      <div class="card-block">
+        <h4 class="card-title">Card title</h4>
+        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+        <a href="#" class="btn btn-primary">Go somewhere</a>
+      </div-->
+    </div>
+    <div class="col-md-4 bgclass">
       <h2>Weapon detection</h2>
       <p>Detect the presence of threat-posing elements sneaking under your surveillance system. Choose the set of objects that is off-limits and let the smart cam take care</p>
     </div>
-    <div class="col-md-4">
-      <h2>Weapon detection</h2>
-      <p>Detect the presence of threat-posing elements sneaking under your surveillance system. Choose the set of objects that is off-limits and let the smart cam take care</p>
+    <div class="col-md-4 bgclass">
+      <h2>Instant notifications</h2>
+      <p>Do not worry about being around all the time. Subscribe for alerts and our admin will make sure you get instant notifications on your phone or mail, or both if you want so</p>
     </div>
-    <div class="col-md-4">
+    <div class="col-md-4 bgclass">
       <h2>Video Analytics</h2>
       <p>Keep a track of the all the elements that visit your area under surveillance. Track this data over a day,week,month or year. This 'll help identify the time-slots more probable of danger' </p>
     </div>
   </div>
 </section>
 </div>
-<div ng-controller="HeaderController as vm" ng-show="vm.authentication.user">
-  <iframe src="http://localhost:5601/app/kibana#/visualize/create?embed=true&type=histogram&indexPattern=new_index&_g=()&_a=(filters:!(),linked:!f,query:(query_string:(analyze_wildcard:!t,query:'*')),uiState:(),vis:(aggs:!((enabled:!t,id:'1',params:(),schema:metric,type:count),(enabled:!t,id:'2',params:(field:scores.class.keyword,order:desc,orderBy:'1',size:5),schema:segment,type:terms)),listeners:(),params:(addLegend:!t,addTimeMarker:!f,addTooltip:!t,defaultYExtents:!f,legendPosition:right,mode:stacked,scale:linear,setYExtents:!f,times:!()),title:'New+Visualization',type:histogram))" height="600" width="800"></iframe>
+<div ng-controller="HeaderController as vm" ng-show="vm.authentication.user" class="deep">
+  <!--iframe src="http://localhost:5601/app/kibana#/visualize/create?embed=true&type=histogram&indexPattern=new_index&_g=()&_a=(filters:!(),linked:!f,query:(query_string:(analyze_wildcard:!t,query:'*')),uiState:(),vis:(aggs:!((enabled:!t,id:'1',params:(),schema:metric,type:count),(enabled:!t,id:'2',params:(field:scores.class.keyword,order:desc,orderBy:'1',size:5),schema:segment,type:terms)),listeners:(),params:(addLegend:!t,addTimeMarker:!f,addTooltip:!t,defaultYExtents:!f,legendPosition:right,mode:stacked,scale:linear,setYExtents:!f,times:!()),title:'New+Visualization',type:histogram))" height="600" width="800"></iframe-->
+  <!--iframe src="https://search-smartcamsonelastic-pknjbnt5zydbsv7eswizna5kju.us-west-2.es.amazonaws.com/_plugin/kibana/app/kibana#/visualize/create?embed=true&type=histogram&indexPattern=new_index&_g=()&_a=(filters:!(),linked:!f,query:(query_string:(analyze_wildcard:!t,query:'*')),uiState:(),vis:(aggs:!((enabled:!t,id:'1',params:(),schema:metric,type:count),(enabled:!t,id:'2',params:(field:post_date.keyword,order:desc,orderBy:'1',size:5),schema:segment,type:terms)),listeners:(),params:(addLegend:!t,addTimeMarker:!f,addTooltip:!t,defaultYExtents:!f,legendPosition:right,mode:stacked,scale:linear,setYExtents:!f,shareYAxis:!t,times:!(),yAxis:()),title:'New+Visualization',type:histogram))" height="600" width="800"></iframe-->
+  <iframe src="https://search-smartcamsonelastic-pknjbnt5zydbsv7eswizna5kju.us-west-2.es.amazonaws.com/_plugin/kibana/app/kibana#/dashboard?embed=true&_g=()" height="600" width="800"></iframe>
 </div>
