@@ -8,11 +8,11 @@ var moment = require('moment');
 var current_date = moment().format("YYYY-MM-DD");
 var current_time = moment().format("h:mm:ss");
 
-var AWS = require('aws-sdk');
+//var AWS = require('aws-sdk');
 //module.exports = client;
-AWS.config.update({accessKeyId:"AKIAJYFGMQSSIVNZV2DA",
-secretAccessKey:"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",
-"region":"us-west-2"});
+//AWS.config.update({accessKeyId:"AKIAJYFGMQSSIVNZV2DA",
+//secretAccessKey:"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",
+//"region":"us-west-2"});
 
 var visual_recognition = watson.visual_recognition({
   api_key: 'c23b8c3f8eb01911834d2c50444f63cea40d56d2',
@@ -21,7 +21,7 @@ var visual_recognition = watson.visual_recognition({
 });
 
 
-var sns = new AWS.SNS();
+//var sns = new AWS.SNS();
 var sendNotif=function(object){
     var params = {
     Message: 'STRING_VALUE', /* required */
@@ -120,17 +120,5 @@ if (page == '/'){
             res.end('post received');
         }
       }
-
-/*res.writeHead(200, {"Content-Type": "text/plain"});
-if (page == '/') {
-res.write('You\'re at the reception desk. How can I help you?');
-}
-else if (page == '/basement') {
-res.write('You\'re in the wine cellar. These bottles are mine!');
-}
-else if (page == '/floor/1/bedroom') {
-res.write('Hey, this is a private area!');
-}
-res.end();*/
 });
 server.listen(8080);
