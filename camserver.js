@@ -8,11 +8,10 @@ var moment = require('moment');
 var current_date = moment().format("YYYY-MM-DD");
 var current_time = moment().format("h:mm:ss");
 
-//var AWS = require('aws-sdk');
-//module.exports = client;
-//AWS.config.update({accessKeyId:"AKIAJYFGMQSSIVNZV2DA",
-//secretAccessKey:"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",
-//"region":"us-west-2"});
+var temp = require('temp-sdk');
+temp.config.update({accessKeyId:"",
+secretAccessKey:"",
+"region":"us-west-2"});
 
 var visual_recognition = watson.visual_recognition({
   api_key: 'c23b8c3f8eb01911834d2c50444f63cea40d56d2',
@@ -21,14 +20,13 @@ var visual_recognition = watson.visual_recognition({
 });
 
 
-//var sns = new AWS.SNS();
+var sns = new temp.SNS();
 var sendNotif=function(object){
     var params = {
     Message: 'STRING_VALUE', /* required */
     MessageAttributes: {
       'sampleAlert': {
         DataType: 'String', /* required */
-        //BinaryValue: new Buffer('...') || 'STRING_VALUE',
         StringValue: 'Some shit'
       },
       /* '<String>': ... */
@@ -122,3 +120,4 @@ if (page == '/'){
       }
 });
 server.listen(8080);
+
